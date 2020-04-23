@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1  // biblioteca de classes
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //comentários...
+            //receber um número
+            Console.WriteLine("Digite um número");//escreval
+            // forma de conversão
+            // CAST - int numero = (int)Console.ReadLine();
+            // PARSE - int numero = int.Parse(Console.ReadLine());
+            // Class Convert - int numero = Convert.ToInt32(Console.ReadLine());
+            int numero = int.Parse(Console.ReadLine());
+            // multiplicar este número sucessivamente de 1 até 10
+            // exibir cada resultado em forma de lista
+            for (int i = 0; i < 10;i++)
+            {
+                Console.WriteLine(numero +" X "+ (i+1) + " = " + numero * (i + 1));
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("------------Equação 2º grau--------------");
+            //receba 3 valores para A, B, C e apresente a equação de 2º G
+            Console.WriteLine("digite o valor de A");
+            double A = double.Parse(Console.ReadLine());
+            Console.WriteLine("digite o valor de B");
+            double B = double.Parse(Console.ReadLine());
+            Console.WriteLine("digite o valor de C");
+            double C = double.Parse(Console.ReadLine());
+            double D = Math.Pow(B, 2) - 4 * A * C;// B2 -4 *A*C
+            double X1 = (-B + Math.Sqrt(D)) / (2 * A);
+            double X2 = (-B - Math.Sqrt(D)) / (2 * A);
+            double XV = -B / (2 * A);
+            double YV = -D / (4 * A);
+            Console.WriteLine("-----");
+            Console.WriteLine("Delta = " + D);
+            Console.WriteLine("Raíz 1 = " + X1);
+            Console.WriteLine("Raíz 2 = " + X2);
+            Console.WriteLine("XVértice = " + XV);
+            Console.WriteLine("YVértice = " + YV);
+            Console.ReadKey();
+        }
+    }
+}
